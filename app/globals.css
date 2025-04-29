@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 5% 5%;
+  --foreground: 0 0% 98%;
+  --card: 240 5% 5%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 5% 5%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 240 50% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 10% 10%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 5% 10%;
+  --muted-foreground: 240 5% 65%;
+  --accent: 240 10% 10%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5% 20%;
+  --input: 240 5% 20%;
+  --ring: 240 50% 60%;
+  --radius: 0.5rem;
+
+  --chart-1: 240 50% 60%;
+  --chart-2: 270 50% 60%;
+  --chart-3: 300 50% 60%;
+  --chart-4: 330 50% 60%;
+  --chart-5: 0 50% 60%;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
