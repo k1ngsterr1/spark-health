@@ -41,6 +41,10 @@ import GridBackground from "@/components/grid-background";
 import ParticleBackground from "@/components/particle-background";
 import CountUp from "@/components/count-up";
 import image from "@/assets/SPARK_HEALTH.png";
+import erlan from "@/assets/erlan.png";
+import gaidar from "@/assets/gaidar.png";
+import ruslan from "@/assets/ruslan.png";
+import artem from "@/assets/artem.jpg";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("web");
@@ -316,7 +320,6 @@ export default function Home() {
                 обеспечения наилучшего опыта здравоохранения
               </motion.p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
                 icon={<Shield className="h-10 w-10" />}
@@ -352,7 +355,6 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        {/* How It Works Section */}
         <AnimatedSection id="how-it-works" className="py-20">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -468,40 +470,6 @@ export default function Home() {
             </div>
           </div>
         </AnimatedSection>
-
-        {/* Partners Section - NEW */}
-        <AnimatedSection id="partners" className="py-20 bg-[#13131a]">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="text-3xl md:text-5xl font-bold text-white mb-6"
-              >
-                Наши <span className="text-[oklch(0.6_0.2_240)]">партнеры</span>
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                Мы сотрудничаем с ведущими медицинскими учреждениями и
-                технологическими компаниями
-              </motion.p>
-            </div>
-
-            <div className="flex flex-wrap justify-center items-center gap-12">
-              {[1, 2, 3, 4, 5, 6].map((partner, index) => (
-                <PartnerLogo key={index} index={index} />
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
-
         {/* FAQ Section - NEW */}
         <AnimatedSection id="faq" className="py-20">
           <div className="container mx-auto px-6">
@@ -595,37 +563,22 @@ export default function Home() {
                 здравоохранения
               </motion.p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <TeamMember
-                image="/team-1.png"
-                name="Алексей Мирский"
-                role="Генеральный директор"
+                image={ruslan.src}
+                name="Руслан Махматов"
                 delay={0.1}
               />
+              <TeamMember image={erlan.src} name="Ерлан Жумабаев" delay={0.2} />
               <TeamMember
-                image="/team-2.png"
-                name="Ирина Володина"
-                role="Медицинский директор"
-                delay={0.2}
-              />
-              <TeamMember
-                image="/team-3.png"
-                name="Сергей Новиков"
-                role="Технический директор"
+                image={gaidar.src}
+                name="Гайдар Тимирбаев"
                 delay={0.3}
               />
-              <TeamMember
-                image="/team-4.png"
-                name="Наталья Смирнова"
-                role="Директор по продукту"
-                delay={0.4}
-              />
+              <TeamMember image={artem.src} name="Артем Андреев" delay={0.4} />
             </div>
           </div>
         </AnimatedSection>
-
-        {/* Contact Section - NEW */}
         <AnimatedSection id="contact" className="py-20">
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-12">
